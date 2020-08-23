@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<h1>
+
+		<body style="background-color:lightblue">
+			Welcome to the color quiz!
+	</h1>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<SCRIPT language="JavaScript" type="text/javascript">
+	<!--
+//
+// Documentation:
+//   http://chami.com/tips/javascript/
+//
+function checkAnswer(quizForm,
+                     theAnswer,
+                     urlRight,
+                     urlWrong)
+{
+  var s = "?";
+
+  // go through the "current choices"
+  // to find the selected choice.
+  // radio boxes pointing to choices
+  // must be named "cc"
+  // change if necessary
+  //
+  var i = 0;
+  for(;i<quizForm.elements.length;i++)
+  {
+    if(("cc" ==
+        quizForm.elements[i].name) &&
+       (quizForm.elements[i].checked))
+    {
+      s = quizForm.elements[i].value;
+    }
+  }
+
+  // no choice was selected
+  //
+  if("?" == s)
+  {
+    alert("Please make a selection.");
+    return false;
+  }
+
+  // check if we have the correct
+  // choice selected
+  //
+  if(s == theAnswer)
+  {
+    alert("'"+s+"' is correct!");
+    if(urlRight)
+    {
+    document.location.href = urlRight;
+    }
+  }
+  else
+  {
+    alert("'"+s+"' is incorrect.");
+    if( urlWrong )
+    {
+    document.location.href = urlWrong;
+    }
+  }
+
+  // return "false" to indicate not to
+  // submit the form.
+  // change this to "true" if the form
+  // "action" is valid,
+  // i.e. points to a valid CGI script
+  //
+  return false;
+}
+//-->
+
+</SCRIPT>
+<p style="color: red">What color is this?</p>
+
+
+
+<FORM method="POST" onSubmit="return checkAnswer(this,'C');">
+
+	<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Yellow<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. Green<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. Red<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+
+</FORM>
+  <body>
+    <script src="script.js"></script>
+  </body>
+</html>  
+</SCRIPT>
+
+
+
+</SCRIPT>
+<p style="color: green">What color is this?</p>
+
+<FORM method="POST" onSubmit="return checkAnswer(this,'C');">
+
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Blue<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. Black<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. Green<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>repl.it</title>
+      <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+
+      
+</SCRIPT>
+<p style="color: Orange">What color is this?</p>
+
+<FORM method="POST" onSubmit="return checkAnswer(this,'C');">
+
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Violet<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. Black<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. Orange<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+
+</SCRIPT>
+<p style="color: Purple">What color is this?</p>
+
+<FORM method="POST" onSubmit="return checkAnswer(this,'A');">
+
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A.Red<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. Grey<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. Violet<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">

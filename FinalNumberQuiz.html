@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>
+        <body style="background-color:lightblue">
+      Welcome to the numbers quiz!
+      </h1>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <SCRIPT language="JavaScript"
+        type="text/javascript">
+<!--
+//
+// Documentation:
+//   http://chami.com/tips/javascript/
+//
+function checkAnswer(quizForm,
+                     theAnswer,
+                     urlRight,
+                     urlWrong)
+{
+  var s = "?";
+
+  // go through the "current choices"
+  // to find the selected choice.
+  // radio boxes pointing to choices
+  // must be named "cc"
+  // change if necessary
+  //
+  var i = 0;
+  for(;i<quizForm.elements.length;i++)
+  {
+    if(("cc" ==
+        quizForm.elements[i].name) &&
+       (quizForm.elements[i].checked))
+    {
+      s = quizForm.elements[i].value;
+    }
+  }
+
+  // no choice was selected
+  //
+  if("?" == s)
+  {
+    alert("Please make a selection.");
+    return false;
+  }
+
+  // check if we have the correct
+  // choice selected
+  //
+  if(s == theAnswer)
+  {
+    alert("'"+s+"' is correct!");
+    if(urlRight)
+    {
+    document.location.href = urlRight;
+    }
+  }
+  else
+  {
+    alert("'"+s+"' is incorrect.");
+    if( urlWrong )
+    {
+    document.location.href = urlWrong;
+    }
+  }
+
+  // return "false" to indicate not to
+  // submit the form.
+  // change this to "true" if the form
+  // "action" is valid,
+  // i.e. points to a valid CGI script
+  //
+  return false;
+}
+//-->
+</SCRIPT>
+Which number is one?
+
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'A');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. 1<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. 7<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. 4<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+
+</FORM>
+  <body>
+    <script src="script.js"></script>
+  </body>
+</html>  
+</SCRIPT>
+What number is 1?
+
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. three<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. nine<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. one<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>repl.it</title>
+      <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+
+      
+</FORM>
+What number comes after 6?
+      <FORM method="POST"
+      onSubmit="return checkAnswer(this,'C');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. 9<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. 7<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. 5<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+
+</FORM>
+What is the correct order for the number 1 to 3
+      <FORM method="POST"
+      onSubmit="return checkAnswer(this,'A');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. 1, 4, 5<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. 3, 1, 2<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. 1, 2, 3<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
