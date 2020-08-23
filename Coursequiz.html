@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>
+        <body style="background-color:lightblue">
+      Welcome to the course quiz!
+      </h1>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <SCRIPT language="JavaScript"
+        type="text/javascript">
+<!--
+//
+// Documentation:
+//   http://chami.com/tips/javascript/
+//
+function checkAnswer(quizForm,
+                     theAnswer,
+                     urlRight,
+                     urlWrong)
+{
+  var s = "?";
+
+  // go through the "current choices"
+  // to find the selected choice.
+  // radio boxes pointing to choices
+  // must be named "cc"
+  // change if necessary
+  //
+  var i = 0;
+  for(;i<quizForm.elements.length;i++)
+  {
+    if(("cc" ==
+        quizForm.elements[i].name) &&
+       (quizForm.elements[i].checked))
+    {
+      s = quizForm.elements[i].value;
+    }
+  }
+
+  // no choice was selected
+  //
+  if("?" == s)
+  {
+    alert("Please make a selection.");
+    return false;
+  }
+
+  // check if we have the correct
+  // choice selected
+  //
+  if(s == theAnswer)
+  {
+    alert("'"+s+"' is correct!");
+    if(urlRight)
+    {
+    document.location.href = urlRight;
+    }
+  }
+  else
+  {
+    alert("'"+s+"' is incorrect.");
+    if( urlWrong )
+    {
+    document.location.href = urlWrong;
+    }
+  }
+
+  // return "false" to indicate not to
+  // submit the form.
+  // change this to "true" if the form
+  // "action" is valid,
+  // i.e. points to a valid CGI script
+  //
+  return false;
+}
+//-->
+</SCRIPT>
+How do you spell 1?
+
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. two<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. one<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. three<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+
+</FORM>
+  <body>
+    <script src="script.js"></script>
+  </body>
+</html>  
+</SCRIPT>
+What comes after C?
+
+
+<FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. E<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. D<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. A<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>repl.it</title>
+      <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+
+      
+</FORM>
+What letter comes after D?
+      <FORM method="POST"
+      onSubmit="return checkAnswer(this,'C');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. C<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. B<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. E<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+
+</FORM>
+Which of these is the name of a shape?
+      <FORM method="POST"
+      onSubmit="return checkAnswer(this,'A');"
+>
+
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Square<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. Triengle<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. Cicle<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+<br>
+Which of these is not the name of a shape?
+      <FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+<br>
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. Square<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. Triengle<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. Circle<BR>
+<INPUT TYPE= "SUBMIT" VALUE="Submit Answer">
+<br>
+
+
+Which of these is after H?
+      <FORM method="POST"
+      onSubmit="return checkAnswer(this,'A');"
+>
+<br>
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. I<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. A<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. E<BR>
+
+<INPUT TYPE= "SUBMIT" VALUE="Submit Answer">
+<br>
+Which of these is a name of a shape?
+      <FORM method="POST"
+      onSubmit="return checkAnswer(this,'B');"
+>
+<br>
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. rectan<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. circle<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. sq<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+<br>
+Which of these is after 8?
+      <FORM method="POST"
+      onSubmit="return checkAnswer(this,'A');"
+>
+<br>
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. 9<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. 10<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. 8<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
+<br>
+
+
+Which of these is before 3?
+      <FORM method="POST"
+      onSubmit="return checkAnswer(this,'C');"
+>
+<br>
+<INPUT TYPE="RADIO" VALUE="A" NAME="cc">
+A. 4<BR>
+
+<INPUT TYPE="RADIO" VALUE="B" NAME="cc">
+B. 3<BR>
+
+<INPUT TYPE="RADIO" VALUE="C" NAME="cc">
+C. 2<BR>
+
+<INPUT TYPE="SUBMIT" VALUE="Submit Answer">
