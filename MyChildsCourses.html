@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* This is the side bar */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: Mediumseagreen;
+  overflow-x: hidden;
+}
+div.a {
+			position: absolute;
+			top: 20px;
+      right: 0px;
+			width: 10%;
+		}
+
+
+/* The links in the baer */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* istyling */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  left: 0px;
+  padding-left: 50px;
+  padding-right: 350px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-bottom: 9px;
+
+}
+.container {
+  float: right;
+  width: 575px;
+  border: 3px solid powerBlue;
+  padding: 50px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  right: 0px;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0px;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+</style>
+<body style="background-color: powderBlue">
+<div class="a">
+<img src="images/Logo.png" alt="Elite Innovators" width="100" height="100">
+</div>
+<div class="sidenav">
+<a style="font-size:20px" href="ParentHomePage.html">My Account</a>
+<a style="font-size:20px" href="MyChildsCourses.html">My Child's Courses</a>
+<a style="font-size:20px" href="MyChildsCalendar.html">My Child's Calendar</a>
+<a style="font-size:20px" href="ParentHomePage.html">Settings</a>
+<a style="font-size:20px" href="index.html">Sign Out</a>
+</div>
+<center>
+<h1>What Courses Would You Like Your Child Participate This Week?</h1>
+</center>
+<label class="container" style="font-size: 30px">Learning The Alphabet
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+<label class="container" style="font-size: 30px">Learning Colors
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container" style="font-size: 30px">Learning Numbers
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container" style="font-size: 30px">Learning Shapes
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</body>
+</html>
